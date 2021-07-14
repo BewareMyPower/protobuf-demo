@@ -1,0 +1,8 @@
+{
+  "name": "pulsar-cpp",
+  "version": "2.8.0",
+  "description": "Pulsar C++ SDK",
+  "dependencies": [
+    "protobuf"
+  ]
+}
