@@ -1,0 +1,9 @@
+// See https://github.com/apache/pulsar/blob/master/pulsar-client/src/test/proto/Test.proto
+syntax = "proto3";
+
+package pulsar.external;
+
+message ExternalMessage {
+  string stringField = 1;
+  double doubleField = 2;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option optimize_for = LITE_RUNTIME;
+
+package tutorial.lite;
+
+message Person {
+  optional string name = 1;
+  optional int32 id = 2;
+}
