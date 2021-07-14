@@ -28,4 +28,5 @@ if (CLANG_FORMAT_BIN)
     message(STATUS "ALL_SOURCE_FILES: ${ALL_SOURCE_FILES}")
     add_custom_target(format
         COMMAND ${CLANG_FORMAT_BIN} -i ${ALL_SOURCE_FILES})
+    add_dependencies(person format)
 endif ()

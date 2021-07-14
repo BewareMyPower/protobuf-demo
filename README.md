@@ -38,14 +38,10 @@ On MacOS, you can also run the wrapped scripts:
 
 ## Code format
 
-`clang-format` is required. Run:
+If `clang-format` is installed, the code will be formatted automatically using `clang-format`.
+
+You can also run following command to format the code manually.
 
 ```bash
 cmake --build ./build --target format
-```
-
-You can also run the wrapped script:
-
-```bash
-./scripts/format.sh
 ```
