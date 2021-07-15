@@ -18,7 +18,18 @@ inline std::string to_string(
          " }";
 }
 
+void showTestMessageExample();
+
+void descriptorExample();
+
 int main(int argc, char* argv[]) {
+  showTestMessageExample();
+  descriptorExample();
+  return 0;
+}
+
+void showTestMessageExample() {
+  cout << "# showTestMessageExample\n";
   pulsar::TestMessage test_message;
 
   // 1. Initialize
@@ -59,6 +70,14 @@ int main(int argc, char* argv[]) {
   // 3. We must release the nestedField, otherwise the pointer will be deleted
   // by Protobuf automatically.
   test_message.release_nestedfield();
+}
 
-  return 0;
+void descriptorExample() {
+  cout << "# descriptorExample\n";
+  const auto descriptor = pulsar::TestMessage::GetDescriptor();
+  cout << "name: " << descriptor->name() << "\n";
+  cout << "full_name: " << descriptor->full_name() << "\n";
+  cout << "index: " << descriptor->index() << "\n";
+  cout << "DebugString: " << descriptor->DebugString() << "\n";
+  cout.flush();
 }
