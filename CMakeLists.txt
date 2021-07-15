@@ -9,6 +9,9 @@ if (VCPKG_TRIPLET)
     message(STATUS "CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
 endif ()
 
+find_package(Boost CONFIG REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+
 find_package(Protobuf CONFIG REQUIRED)
 include_directories(${Protobuf_INCLUDE_DIRS})
 include_directories(${CMAKE_BINARY_DIR})
