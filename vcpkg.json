@@ -4,6 +4,7 @@
   "description": "Pulsar C++ SDK",
   "dependencies": [
     "boost-serialization",
+    "gtest",
     "protobuf"
   ]
 }
